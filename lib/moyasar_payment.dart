@@ -124,7 +124,7 @@ class MoyasarPayment {
     required String cardHolderName,
     required String cardNumber,
     required String cvv,
-    required String expiryManth,
+    required String expiryMonth,
     required String expiryYear,
     required String callbackUrl,
   }) async {
@@ -133,7 +133,7 @@ class MoyasarPayment {
       'name': cardHolderName,
       'number': int.parse(cardNumber),
       'cvc': int.parse(cvv),
-      'month': expiryManth,
+      'month': expiryMonth,
       'year': expiryYear
     };
 
