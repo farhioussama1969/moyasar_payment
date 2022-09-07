@@ -127,16 +127,14 @@ class MoyasarPayment {
     required String expiryMonth,
     required String expiryYear,
     required String callbackUrl,
-    required String company,
   }) async {
     var source = {
       'type': 'creditcard',
       'name': cardHolderName,
-      'number': int.parse(cardNumber),
+      'number': cardNumber,
       'cvc': int.parse(cvv),
       'month': expiryMonth,
       'year': expiryYear,
-      'company': company,
     };
 
     return _pay(
