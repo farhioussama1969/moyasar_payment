@@ -20,7 +20,7 @@ class PayModel {
    String? createdAt; // creation timestamp in ISO 8601 format.
    String? updatedAt; // modification timestamp in ISO 8601 format.
   Object? metadata; // metadata object (default: null)
-   var? source; // source object defined the type of payment.
+   var source; // source object defined the type of payment.
   String? type;
   String? message = '';
 
