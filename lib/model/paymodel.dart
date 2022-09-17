@@ -1,28 +1,28 @@
 class PayModel {
-  late String id; //payment’s unique ID.
-  String status = 'initiated'; // payment status.(default: initiated)
-  late int amount; // payment amount in halals.
-  late int fee; // transaction fee in halals.
-  String currency =
+   String? id; //payment’s unique ID.
+  String? status = 'initiated'; // payment status.(default: initiated)
+   int? amount; // payment amount in halals.
+   int? fee; // transaction fee in halals.
+  String? currency =
       "SAR"; // 3 currency code iso alpha payment currency. (default: SAR);
-  int refunded = 0; // refunded amount in halals. (default: 0)
+  int? refunded = 0; // refunded amount in halals. (default: 0)
   String? refundedAt; // datetime of refunded. (default: null)
-  int captured = 0; // captured amount in halals. (default: 0)
+  int? captured = 0; // captured amount in halals. (default: 0)
   String?
       capturedAt; // datetime of authroized payment captured. (default: null)
   String? voidedAt; // datetime of voided. (default: null)
   String? description; // payment description
   String?
       invoiceId; // ID of the invoice this payment is for if one exists.(default: null)
-  late String ip; // User IP
-  late String
+   String? ip; // User IP
+   String?
       callbackUrl; // page url in customer’s site for final redirection. (used for creditcard 3-D secure and form payment)
-  late String createdAt; // creation timestamp in ISO 8601 format.
-  late String updatedAt; // modification timestamp in ISO 8601 format.
+   String? createdAt; // creation timestamp in ISO 8601 format.
+   String? updatedAt; // modification timestamp in ISO 8601 format.
   Object? metadata; // metadata object (default: null)
-  late var source; // source object defined the type of payment.
+   var? source; // source object defined the type of payment.
   String? type;
-  String message = '';
+  String? message = '';
 
   PayModel(
       this.id,
